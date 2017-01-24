@@ -1,21 +1,37 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Byte 1 Tutorial</title>
+<title>Byte 1 by Yilin Ying</title>
 </head>
 <body>
-<h1>Data Pipeline Project Byte One</h1>
-<p> Yilin Ying </p>
 
-<h2> 1. Test Scores by Area in Map </h2>
+<p> Yilin Ying, Byte 1 for Big Data Pipeline </p>
+<p> Jan 23, 2017 </p> 
+<h1>OECD's PISA Report --- World Education Ranking for 2010</h1>
+<p> </p> 
+<p> 
+    link of data source: https://www.theguardian.com/news/datablog/2010/dec/07/world-education-rankings-maths-science-reading
+</p> 
+
+<p>
+Around 470,000 15-year-olds across the world took a numeracy, literacy and science test in 2009, 
+the results of which informed the 2010 Pisa study by the Paris-based Organisation for Economic Co-operation and Development (OECD).
+</p>
+<p>
+We are interested in the following 3 questions and have launched some data explration in Google Fusion Tables:
+</p>
+<ul> 
+<li> What are the average scores of each country? </li>
+<li> Which country perform the best in test? </li>
+<li> Is there a correlation between maths, reading and science scores for the countries?</li>
+</ul>  
+<h2> 1. Test Scores by Area in Maps </h2>
     <p> (1) Reading Score </p>
     <iframe width="900" height="400" scrolling="no" frameborder="no" src="https://fusiontables.google.com/embedviz?viz=GVIZ&amp;t=MAP&amp;gco_region=world&amp;gco_dataMode=regions&amp;containerId=googft-gviz-canvas&amp;q=select+gvizcountry(col0)%2C+col2%2C+col0+from+1n0VV53pRUTQDkB6D1xLIOvvf7JpxVtbfnyH_CGFd&amp;qrs=+where+gvizcountry(col0)+%3E%3D+&amp;qre=+and+gvizcountry(col0)+%3C%3D+&amp;qe=+limit+66&amp;att=true&amp;width=900&amp;height=385"></iframe>
-    <p> </p>
-    
+    <p> </p>    
     <p> (2) Science Score </p>
     <iframe width="900" height="400" scrolling="no" frameborder="no" src="https://fusiontables.google.com/embedviz?viz=GVIZ&amp;t=MAP&amp;gco_region=world&amp;gco_dataMode=regions&amp;containerId=googft-gviz-canvas&amp;q=select+gvizcountry(col0)%2C+col1%2C+col0+from+1n0VV53pRUTQDkB6D1xLIOvvf7JpxVtbfnyH_CGFd&amp;qrs=+where+gvizcountry(col0)+%3E%3D+&amp;qre=+and+gvizcountry(col0)+%3C%3D+&amp;qe=+limit+66&amp;att=true&amp;width=900&amp;height=385"></iframe>
     <p> </p>
-	
 	<p> (3) Maths Score </p>
 	<iframe width="900" height="400" scrolling="no" frameborder="no" src="https://fusiontables.google.com/embedviz?viz=GVIZ&amp;t=MAP&amp;gco_region=world&amp;gco_dataMode=regions&amp;containerId=googft-gviz-canvas&amp;q=select+gvizcountry(col0)%2C+col3%2C+col0+from+1n0VV53pRUTQDkB6D1xLIOvvf7JpxVtbfnyH_CGFd&amp;qrs=+where+gvizcountry(col0)+%3E%3D+&amp;qre=+and+gvizcountry(col0)+%3C%3D+&amp;qe=+limit+66&amp;att=true&amp;width=900&amp;height=385"></iframe>
     <p> </p>
@@ -29,8 +45,16 @@
 	<p> (3) Top in Maths Score </p>
 	<iframe width="900" height="350" scrolling="no" frameborder="no" src="https://fusiontables.google.com/embedviz?viz=GVIZ&amp;t=BAR&amp;gco_allowHtml=false&amp;gco_legacyScatterChartLabels=true&amp;gco_isStacked=false&amp;gco_booleanRole=certainty&amp;gco_hAxis=%7B%22useFormatFromData%22%3Atrue%2C+%22viewWindow%22%3A%7B%22max%22%3Anull%2C+%22min%22%3Anull%7D%2C+%22minValue%22%3Anull%2C+%22maxValue%22%3Anull%7D&amp;gco_vAxes=%5B%7B%22useFormatFromData%22%3Atrue%2C+%22minValue%22%3Anull%2C+%22maxValue%22%3Anull%2C+%22viewWindow%22%3Anull%2C+%22viewWindowMode%22%3Anull%7D%2C%7B%22useFormatFromData%22%3Atrue%7D%5D&amp;gco_legend=right&amp;gco_series=%7B%220%22%3A%7B%22color%22%3A%22%2393c47d%22%7D%7D&amp;gco_domainAxis=%7B%22direction%22%3A-1%7D&amp;containerId=googft-gviz-canvas&amp;q=select+col0%2C+col3+from+1n0VV53pRUTQDkB6D1xLIOvvf7JpxVtbfnyH_CGFd+where+col3+%3E+&#39;520&#39;&amp;qrs=+and+col0+%3E%3D+&amp;qre=+and+col0+%3C%3D+&amp;qe=+limit+11&amp;att=true&amp;width=900&amp;height=385"></iframe>
 	
-   <p> 
-    link of data source: https://www.theguardian.com/news/datablog/2010/dec/07/world-education-rankings-maths-science-reading
-	</p> 
+  
+<h2> 3. Is there a correlation between different scores? </h2>
+	<p> (1) Reading Score by Science Score </p>
+	<iframe width="900" height="400" scrolling="no" frameborder="no" src="https://fusiontables.google.com/embedviz?viz=GVIZ&amp;t=SCATTER&amp;gco_allowHtml=false&amp;gco_treatLabelsAsText=false&amp;gco_legacyScatterChartLabels=true&amp;gco_lineWidth=0&amp;gco_booleanRole=certainty&amp;gco_pointSize=7&amp;gco_hAxis=%7B%22useFormatFromData%22%3Atrue%2C+%22viewWindow%22%3A%7B%22max%22%3Anull%2C+%22min%22%3Anull%7D%2C+%22minValue%22%3Anull%2C+%22maxValue%22%3Anull%2C+%22title%22%3A%22Science+Score%22%7D&amp;gco_vAxes=%5B%7B%22useFormatFromData%22%3Atrue%2C+%22viewWindow%22%3A%7B%22max%22%3Anull%2C+%22min%22%3Anull%7D%2C+%22minValue%22%3Anull%2C+%22maxValue%22%3Anull%2C+%22title%22%3A%22Reading+Score%22%7D%2C%7B%22useFormatFromData%22%3Atrue%2C+%22viewWindow%22%3A%7B%22max%22%3Anull%2C+%22min%22%3Anull%7D%2C+%22minValue%22%3Anull%2C+%22maxValue%22%3Anull%7D%5D&amp;gco_legend=none&amp;gco_title=Reading+Score+by+Science+Score&amp;gco_series=%7B%220%22%3A%7B%22color%22%3A%22%23f9cb9c%22%2C+%22pointSize%22%3A4%2C+%22errorBars%22%3A%7B%22errorType%22%3A%22none%22%7D%7D%7D&amp;gco_trendlines=%7B%7D&amp;containerId=googft-gviz-canvas&amp;rmax=250&amp;q=select+col1%2C+col2+from+1n0VV53pRUTQDkB6D1xLIOvvf7JpxVtbfnyH_CGFd&amp;qrs=+where+col1+%3E%3D+&amp;qre=+and+col1+%3C%3D+&amp;qe=&amp;att=true&amp;width=900&amp;height=385"></iframe>
+	<p> </p>
+	<p> (2) Science Score by Maths Score </p>
+	<iframe width="900" height="400" scrolling="no" frameborder="no" src="https://fusiontables.google.com/embedviz?viz=GVIZ&amp;t=SCATTER&amp;gco_allowHtml=false&amp;gco_treatLabelsAsText=false&amp;gco_legacyScatterChartLabels=true&amp;gco_lineWidth=0&amp;gco_booleanRole=certainty&amp;gco_pointSize=7&amp;gco_hAxis=%7B%22useFormatFromData%22%3Atrue%2C+%22viewWindow%22%3A%7B%22max%22%3Anull%2C+%22min%22%3Anull%7D%2C+%22minValue%22%3Anull%2C+%22maxValue%22%3Anull%2C+%22title%22%3A%22Maths+Score%22%7D&amp;gco_vAxes=%5B%7B%22useFormatFromData%22%3Atrue%2C+%22viewWindow%22%3A%7B%22max%22%3Anull%2C+%22min%22%3Anull%7D%2C+%22minValue%22%3Anull%2C+%22maxValue%22%3Anull%2C+%22title%22%3A%22Science+Score%22%7D%2C%7B%22useFormatFromData%22%3Atrue%2C+%22viewWindow%22%3A%7B%22max%22%3Anull%2C+%22min%22%3Anull%7D%2C+%22minValue%22%3Anull%2C+%22maxValue%22%3Anull%7D%5D&amp;gco_legend=none&amp;gco_series=%7B%220%22%3A%7B%22color%22%3A%22%23ea9999%22%2C+%22pointSize%22%3A4%7D%7D&amp;gco_title=Science+Score+by+Maths+Score&amp;containerId=googft-gviz-canvas&amp;rmax=250&amp;q=select+col3%2C+col1+from+1n0VV53pRUTQDkB6D1xLIOvvf7JpxVtbfnyH_CGFd&amp;qrs=+where+col3+%3E%3D+&amp;qre=+and+col3+%3C%3D+&amp;qe=&amp;att=true&amp;width=900&amp;height=385"></iframe>
+	<p> </p> 
+	<p> (3) Reading Score by Maths Score </p>
+	<iframe width="900" height="400" scrolling="no" frameborder="no" src="https://fusiontables.google.com/embedviz?viz=GVIZ&amp;t=SCATTER&amp;gco_allowHtml=false&amp;gco_treatLabelsAsText=false&amp;gco_legacyScatterChartLabels=true&amp;gco_lineWidth=0&amp;gco_booleanRole=certainty&amp;gco_pointSize=7&amp;gco_hAxis=%7B%22useFormatFromData%22%3Atrue%2C+%22viewWindow%22%3A%7B%22max%22%3Anull%2C+%22min%22%3Anull%7D%2C+%22minValue%22%3Anull%2C+%22maxValue%22%3Anull%2C+%22title%22%3A%22Maths+Score%22%7D&amp;gco_vAxes=%5B%7B%22useFormatFromData%22%3Atrue%2C+%22viewWindow%22%3A%7B%22max%22%3Anull%2C+%22min%22%3Anull%7D%2C+%22minValue%22%3Anull%2C+%22maxValue%22%3Anull%2C+%22title%22%3A%22Reading+Score%22%7D%2C%7B%22useFormatFromData%22%3Atrue%2C+%22viewWindow%22%3A%7B%22max%22%3Anull%2C+%22min%22%3Anull%7D%2C+%22minValue%22%3Anull%2C+%22maxValue%22%3Anull%7D%5D&amp;gco_legend=none&amp;gco_title=Reading+Score+by+Maths+Score&amp;gco_series=%7B%220%22%3A%7B%22color%22%3A%22%23b4a7d6%22%2C+%22pointSize%22%3A4%7D%7D&amp;containerId=googft-gviz-canvas&amp;rmax=250&amp;q=select+col3%2C+col2+from+1n0VV53pRUTQDkB6D1xLIOvvf7JpxVtbfnyH_CGFd&amp;qrs=+where+col3+%3E%3D+&amp;qre=+and+col3+%3C%3D+&amp;qe=&amp;att=true&amp;width=900&amp;height=385"></iframe>
+
 </body>
 </html>
